@@ -1,20 +1,80 @@
 'use strict'
 // 1行目に記載している 'use strict' は削除しないでください
 
+//関数入門
+//中級問題
+//2
+function createGreeting(phrase, friend) {
+  return phrase + ", " + friend + "!";
+}
+
+// ここにコードを書いてください。
+const morningGreeting = createGreeting("Good mornig", "Mike");
+const dayGreeting = createGreeting("Hello", "Bob");
+const eveningGreeting = createGreeting("Good evening", "Alex");
+
+console.log(morningGreeting); // "Good morning, Mike!" を表示
+console.log(dayGreeting); // "Hello, Bob!" を表示
+console.log(eveningGreeting); // "Good evening, Alex!" を表示
+
+//応用問題
 //1
-％ 演算子を使用しないで isEven 関数を書き換えてください。
+<script type="text/javascript" src="advanced.js"></script>
 
 //2
-2 つの引数のうち大きい数値を返す getGreaterValue という名前の関数を作成してください。
-console.log(getGreaterValue(10, 15)); // 15 を表示
-console.log(getGreaterValue(15, 10)); // 15 を表示
+console.log(guessMyNumber(1));
+console.log(guessMyNumber(6));
+
+function guessMyNumber(n) {
+  if (n > 6) {
+    return "0 から 6 の間の数値を入力してください。";
+  } else if (n === randomNumber(6)) {
+    return "当たりです！";
+  }
+  return "残念！はずれです。";
+}
+
+function randomNumber(n) {
+  return Math.floor(Math.random() * (n + 1));
+}
+
+console.log(guessMyNumber(1));
+console.log(guessMyNumber(7));
 
 //3
-console.log(getGreatestValue(10, 15)); // 15 を表示
-console.log(getGreatestValue(15, 10)); // 15 を表示
-console.log(getGreatestValue(1, 2, 3, 4, 5)); // 5 を表示
-console.log(getGreatestValue(1, 10, 3, 4, 5)); // 10 を表示
+let upperBound = 6;
 
-//ナイトメア
-//flatten という名前の関数を作成しましょう。引数に、入れ子になった配列を与えると、全部の要素を入れ子のない一つの配列に入れて返すようにしてください。
-//もともと JavaScript に組み込まれている Array.prototype.flatというメソッドを使ってはいけません。
+function guessMyNumber(n) {
+  if (n > upperBound) {
+    return "0 から " + upperBound + " の間の数値を入力してください。";
+  } else if (n === randomNumber(upperBound)) {
+    return "当たりです！";
+  }
+  return "残念！はずれです。";
+}
+
+function randomNumber(n) {
+  return Math.floor(Math.random() * (n + 1));
+}
+
+console.log(guessMyNumber(1));
+console.log(guessMyNumber(7));
+
+//4
+let upperBound = 6;
+
+function guessMyNumber(n) {
+  if (n > upperBound) {
+    return "0 から " + upperBound + " の間の数値を入力してください。";
+  } else if (n === randomNumber(upperBound)) {
+    return "当たりです！";
+  }
+  return "残念！正解は " + randomNumber(n) +" でした。";
+}
+
+function randomNumber(n) {
+  return Math.floor(Math.random() * (n + 1));
+}
+
+console.log(guessMyNumber(1));
+console.log(guessMyNumber(7));
